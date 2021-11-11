@@ -7,6 +7,7 @@ TagManager:
   - Grass
   - Background
   - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX
