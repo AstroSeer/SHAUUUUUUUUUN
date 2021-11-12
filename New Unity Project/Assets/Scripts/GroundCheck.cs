@@ -13,14 +13,14 @@ public class GroundCheck : MonoBehaviour {
     void Update() {
     }
 
-    // Checks if player is touching grass
+    // Checks if player is touching ground
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.collider.tag == "Ground") {
             Player.GetComponent<PlayerMovement>().grounded = true;
         }
     }
 
-    // Checks if player is not touching grass
+    // Checks if player is not touching ground
     private void OnCollisionExit2D(Collision2D collision) {
         if (collision.collider.tag == "Ground") {
             Player.GetComponent<PlayerMovement>().grounded = false;
