@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5602881685306299079, guid: 2bdd6164055fdf44e8c13a3158caee52, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: 2bdd6164055fdf44e8c13a3158caee52, type: 3}
 --- !u!1 &519420028
@@ -290,7 +294,6 @@ GameObject:
   - component: {fileID: 1001844433}
   - component: {fileID: 1001844432}
   - component: {fileID: 1001844434}
-  - component: {fileID: 1001844435}
   - component: {fileID: 1001844436}
   m_Layer: 0
   m_Name: Thief
@@ -386,21 +389,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1001844435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001844431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec268b38b21da74a8cf67f89d315a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovementSpeed: 6
-  playerJumpHeight: 6
-  grounded: 0
 --- !u!61 &1001844436
 BoxCollider2D:
   m_ObjectHideFlags: 0
