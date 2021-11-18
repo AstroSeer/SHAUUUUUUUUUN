@@ -10,9 +10,19 @@ public class PlayerMovement : MonoBehaviour {
     public bool wallRight = false;
     public bool gravityShift = false;
     public Animator animator;
+
+
+    public AudioSource p_audio;
+
+    public AudioClip walking_sfx;
+
+    public AudioClip gravity_shift_sfx;
+
+
     // Start is called before the first frame update
     void Start() {
-        
+
+        p_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +30,9 @@ public class PlayerMovement : MonoBehaviour {
         Jump();
         // Horizontal input causes character to move at playerMovementSpeed's value
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        if ((move.x < 0 || move.x > 0) && ! p_audio.isPlaying)
+            p_audio.PlayOneShot(walking_sfx, 1);
+
         if(move.x < 0 && wallLeft) {
             move.x = 0;
         }
@@ -30,6 +43,7 @@ public class PlayerMovement : MonoBehaviour {
             transform.position += move * Time.deltaTime * playerMovementSpeed;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            p_audio.PlayOneShot(gravity_shift_sfx, 1);
             gravityShift = !gravityShift;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             Debug.Log(gravityShift);
