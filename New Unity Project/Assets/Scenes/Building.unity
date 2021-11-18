@@ -410,12 +410,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b834b0291e542cb41a114a9542ec285a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovementSpeed: 8
+  playerMovementSpeed: 7
   playerJumpHeight: 1000
   grounded: 0
   wallLeft: 0
   wallRight: 0
   gravityShift: 0
+  animator: {fileID: 886809606}
 --- !u!70 &886809610
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
