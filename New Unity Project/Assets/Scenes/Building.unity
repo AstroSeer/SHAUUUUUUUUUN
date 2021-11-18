@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4001607993560129291, guid: 2bdd6164055fdf44e8c13a3158caee52, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5566287977667650011, guid: 2bdd6164055fdf44e8c13a3158caee52, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -410,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b834b0291e542cb41a114a9542ec285a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovementSpeed: 7
+  playerMovementSpeed: 8
   playerJumpHeight: 1000
   grounded: 0
   wallLeft: 0
