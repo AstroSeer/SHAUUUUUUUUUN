@@ -422,8 +422,9 @@ MonoBehaviour:
   wallRight: 0
   gravityShift: 0
   animator: {fileID: 886809606}
-  gravity_sfx: {fileID: 0}
-  walk_sfx: {fileID: 0}
+  p_audio: {fileID: 886809613}
+  walking_sfx: {fileID: 8300000, guid: 486f8ea7ee492c74e80f954c629ff563, type: 3}
+  gravity_shift_sfx: {fileID: 8300000, guid: ee61025ac06a85a438073e17524c10d4, type: 3}
 --- !u!70 &886809610
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

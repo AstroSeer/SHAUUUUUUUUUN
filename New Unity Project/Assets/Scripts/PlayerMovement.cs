@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
         Jump();
         // Horizontal input causes character to move at playerMovementSpeed's value
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        if ((move.x < 0 || move.x > 0) && ! p_audio.isPlaying)
+        if ((move.x < 0 || move.x > 0) && ! p_audio.isPlaying && grounded)
             p_audio.PlayOneShot(walking_sfx, 1);
 
         if(move.x < 0 && wallLeft) {
