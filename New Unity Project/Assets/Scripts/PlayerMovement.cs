@@ -43,6 +43,12 @@ public class PlayerMovement : MonoBehaviour {
             }
             transform.localScale = characterScaleY;
         }
+        if (grounded == false) {
+            animator.SetBool("IsFalling", true);
+        }
+        if (grounded == true) {
+            animator.SetBool("IsFalling", false);
+        }
         // Flip the Character
         Vector3 characterScaleX = transform.localScale;
         if (Input.GetAxis("Horizontal") < 0){
@@ -62,6 +68,9 @@ public class PlayerMovement : MonoBehaviour {
         if(Input.GetButtonDown("Jump") && grounded == true) {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
             animator.SetBool("IsJumping", true);
+        }
+        if(grounded == false) {
+            animator.SetBool("IsJumping", false);
         }
     }
 }
