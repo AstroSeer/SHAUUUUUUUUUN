@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour {
     void Jump() {
         if(Input.GetButtonDown("Jump") && grounded == true) {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
+            animator.SetBool("IsJumping", true);
         }
     }
 }
