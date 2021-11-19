@@ -14,17 +14,11 @@ public class WallCheck : MonoBehaviour {
 
     }
     private void OnCollisionEnter2D(Collision2D collision) {
-        float otherPos = collision.gameObject.transform.position.x;
-        float selfPos = Player.transform.position.x;
         if(collision.collider.tag == "Wall") {
-            float diff = selfPos - otherPos;
-            //Debug.Log("otherPos is " + otherPos);
-            //Debug.Log("selfPos is " + selfPos);
-            //Debug.Log("diff is " + diff);
-            if (diff < 0) {
+            if (Player.GetComponent.tag == "RightWall") {
                 Player.GetComponent<PlayerMovement>().wallRight = true;
             }
-            else {
+            else if (self.tag == "LeftWall") {
                 Player.GetComponent<PlayerMovement>().wallLeft = true;
             }
         }
