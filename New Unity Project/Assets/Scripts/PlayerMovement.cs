@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
             gravityShift = !gravityShift;
+            playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             Debug.Log(gravityShift);
             Vector3 characterScaleY = transform.localScale;
