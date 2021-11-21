@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Building.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Outside.unity
+    guid: 622adf16b0e166342a76acaecf099524
+  - enabled: 1
+    path: Assets/Scenes/Sewer.unity
+    guid: db613a2106c30e949a98cb4f18420a9a
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: d83467bde034646458eb11f71a2bbb91
   m_configObjects: {}
