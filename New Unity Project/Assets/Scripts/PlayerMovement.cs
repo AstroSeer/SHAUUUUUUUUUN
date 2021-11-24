@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
     public float playerMovementSpeed = 6f;
@@ -69,5 +70,10 @@ public class PlayerMovement : MonoBehaviour {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
             animator.SetTrigger("IsJumping");
         }
+    }
+
+    //NextLevel
+    private void OnTriggerEnter2D(Collider2D collider) {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
