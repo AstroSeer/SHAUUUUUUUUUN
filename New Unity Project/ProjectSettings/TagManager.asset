@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - LeftWall
   - RightWall
+  - NextLevel
+  - OutOfBounds
   layers:
   - Default
   - TransparentFX

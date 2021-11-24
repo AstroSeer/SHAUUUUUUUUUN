@@ -74,6 +74,11 @@ public class PlayerMovement : MonoBehaviour {
 
     //NextLevel
     private void OnTriggerEnter2D(Collider2D collider) {
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(collider.tag == "NextLevel") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if(collider.tag == "OutOfBounds") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
