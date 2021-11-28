@@ -61,7 +61,10 @@ public class PlayerMovement : MonoBehaviour {
         transform.localScale = characterScaleX;
         // Walk & Idle Animation
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-
+        if (Input.GetKeyDown(KeyCode.X)) {
+            animator.SetTrigger("Death");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     }
 
     // Method for 
