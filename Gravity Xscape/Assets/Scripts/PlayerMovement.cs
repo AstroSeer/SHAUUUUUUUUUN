@@ -9,7 +9,10 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded = false;
     public bool wallLeft = false;
     public bool wallRight = false;
+
     public bool gravityShift = false;
+    public bool canShift = false;
+    
     public int keys = 0;
     public bool keysAdd = false;
     public bool keysSub = false;
@@ -60,9 +63,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += move * Time.deltaTime * playerMovementSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canShift)
         {
             gravityShift = !gravityShift;
+            canShift = !canShift;
             p_audio.PlayOneShot(gravity_sfx, .7f);
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
