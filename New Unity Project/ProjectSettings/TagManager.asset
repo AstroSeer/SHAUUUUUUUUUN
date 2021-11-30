@@ -6,10 +6,6 @@ TagManager:
   tags:
   - Ground
   - Wall
-  - LeftWall
-  - RightWall
-  - NextLevel
-  - OutOfBounds
   layers:
   - Default
   - TransparentFX
