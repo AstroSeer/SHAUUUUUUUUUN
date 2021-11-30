@@ -818,7 +818,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 6527623753779468337, guid: c174fcb8aa531204a8913420b2b3b1ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1547,6 +1547,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8099154903086190596, guid: b00799647ea61724487818cdfc4ea256, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: -7745856327508816234, guid: b00799647ea61724487818cdfc4ea256, type: 3}
       propertyPath: m_TagString
       value: NextLevel
@@ -1599,6 +1603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3370782612487517664, guid: b00799647ea61724487818cdfc4ea256, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -622149606889463801, guid: b00799647ea61724487818cdfc4ea256, type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -1606,6 +1614,10 @@ PrefabInstance:
     - target: {fileID: 2540605995438243935, guid: b00799647ea61724487818cdfc4ea256, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924414068060638188, guid: b00799647ea61724487818cdfc4ea256, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: b00799647ea61724487818cdfc4ea256, type: 3}
