@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Ground
   - Wall
-  - Key
-  - Door
+  - LeftWall
+  - RightWall
+  - NextLevel
+  - OutOfBounds
   layers:
   - Default
   - TransparentFX

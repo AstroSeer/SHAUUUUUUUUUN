@@ -25,10 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-
         p_audio = GetComponent<AudioSource>();
-
     }
+    // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
@@ -50,10 +49,10 @@ public class PlayerMovement : MonoBehaviour
             wallRight = false;
         }
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+
         if ((move.x < 0 || move.x > 0) && !p_audio.isPlaying && grounded)
             p_audio.PlayOneShot(walk_sfx, 1.0f);
-        if (move.x < 0 && wallLeft)
-        {
+        if(move.x < 0 && wallLeft) {
             move.x = 0;
         }
         else if (move.x > 0 && wallRight)
@@ -83,6 +82,12 @@ public class PlayerMovement : MonoBehaviour
             }
             transform.localScale = characterScaleY;
         }
+        if (grounded == false) {
+            animator.SetBool("IsFalling", true);
+        }
+        if (grounded == true) {
+            animator.SetBool("IsFalling", false);
+        }
         // Flip the Character
         Vector3 characterScaleX = transform.localScale;
         if (Input.GetAxis("Horizontal") < 0)
@@ -96,10 +101,6 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = characterScaleX;
         // Walk & Idle Animation
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-        if (Input.GetKeyDown(KeyCode.X)) {
-            animator.SetTrigger("Death");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
     }
 
     // Method for 
@@ -108,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && grounded == true)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
+            animator.SetTrigger("IsJumping");
         }
     }
 
