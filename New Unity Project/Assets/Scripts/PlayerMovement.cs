@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
     public float playerMovementSpeed = 6f;
@@ -64,13 +65,26 @@ public class PlayerMovement : MonoBehaviour {
         transform.localScale = characterScaleX;
         // Walk & Idle Animation
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
-
+        if (Input.GetKeyDown(KeyCode.X)) {
+            animator.SetTrigger("Death");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     }
 
     // Method for 
     void Jump() {
         if(Input.GetButtonDown("Jump") && grounded == true) {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
+        }
+    }
+
+    //NextLevel
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if(collider.tag == "NextLevel") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if(collider.tag == "OutOfBounds") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
