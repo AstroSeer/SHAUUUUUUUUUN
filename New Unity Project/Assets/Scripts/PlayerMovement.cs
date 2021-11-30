@@ -12,15 +12,8 @@ public class PlayerMovement : MonoBehaviour {
     public bool gravityShift = false;
     public Animator animator;
     // Start is called before the first frame update
-
-    public AudioSource p_audio;
-    public AudioClip gravity_sfx;
-    public AudioClip walk_sfx;
-
     void Start() {
-
-        p_audio = GetComponent<AudioSource>();
-
+        
     }
 
     // Update is called once per frame
@@ -28,8 +21,6 @@ public class PlayerMovement : MonoBehaviour {
         Jump();
         // Horizontal input causes character to move at playerMovementSpeed's value
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        if ((move.x < 0 || move.x > 0) && !p_audio.isPlaying && grounded)
-            p_audio.PlayOneShot(walk_sfx, 1.0f);
         if(move.x < 0 && wallLeft) {
             move.x = 0;
         }
@@ -41,7 +32,6 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
             gravityShift = !gravityShift;
-            p_audio.PlayOneShot(gravity_sfx, .7f);
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             Debug.Log(gravityShift);
@@ -53,6 +43,12 @@ public class PlayerMovement : MonoBehaviour {
                 characterScaleY.y = .1f;
             }
             transform.localScale = characterScaleY;
+        }
+        if (grounded == false) {
+            animator.SetBool("IsFalling", true);
+        }
+        if (grounded == true) {
+            animator.SetBool("IsFalling", false);
         }
         // Flip the Character
         Vector3 characterScaleX = transform.localScale;
@@ -75,6 +71,7 @@ public class PlayerMovement : MonoBehaviour {
     void Jump() {
         if(Input.GetButtonDown("Jump") && grounded == true) {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
+            animator.SetTrigger("IsJumping");
         }
     }
 
