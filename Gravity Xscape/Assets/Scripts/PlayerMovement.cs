@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
     public float playerMovementSpeed = 6f;
-    public float playerJumpHeight = 1000f;
+    public float playerJumpHeight = 10f;
     public bool grounded = false;
     public bool wallLeft = false;
     public bool wallRight = false;
+
     public bool gravityShift = false;
+    public bool canShift = false;
+
+    public int keys = 0;
+    public bool keysAdd = false;
+    public bool keysSub = false;
     public Animator animator;
     // Start is called before the first frame update
     void Start() {

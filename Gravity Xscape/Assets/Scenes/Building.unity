@@ -1448,6 +1448,10 @@ MonoBehaviour:
   wallLeft: 0
   wallRight: 0
   gravityShift: 0
+  canShift: 0
+  keys: 0
+  keysAdd: 0
+  keysSub: 0
   animator: {fileID: 886809606}
 --- !u!70 &886809610
 CapsuleCollider2D:
