@@ -18,10 +18,13 @@ public class PlayerMovement : MonoBehaviour {
     public bool keysSub = false;
 
     public Animator animator;
+    public AudioSource p_audio;
+    public AudioClip gravity_sfx;
+    public AudioClip walk_sfx;
 
     void Start()
     {
-
+        p_audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +48,8 @@ public class PlayerMovement : MonoBehaviour {
         }
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
 
+        if ((move.x < 0 || move.x > 0) && !p_audio.isPlaying && grounded)
+            p_audio.PlayOneShot(walk_sfx, 1.0f);
         if(move.x < 0 && wallLeft) 
         {
             move.x = 0;
@@ -61,6 +66,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             gravityShift = !gravityShift;
             canShift = !canShift;
+            p_audio.PlayOneShot(gravity_sfx, .7f);
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             Debug.Log(gravityShift);
