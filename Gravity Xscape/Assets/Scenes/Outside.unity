@@ -1449,6 +1449,10 @@ MonoBehaviour:
   wallLeft: 0
   wallRight: 0
   gravityShift: 0
+  canShift: 0
+  keys: 0
+  keysAdd: 0
+  keysSub: 0
   animator: {fileID: 1543539452}
 --- !u!95 &1543539452
 Animator:
