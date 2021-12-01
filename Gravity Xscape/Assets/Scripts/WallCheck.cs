@@ -24,8 +24,12 @@ public class WallCheck : MonoBehaviour {
         }
     }
     private void OnCollisionExit2D(Collision2D collision) {
-        if (collision.collider.tag == "Wall") {
+        if (collision.collider.tag == "RightWall")
+        {
             Player.GetComponent<PlayerMovement>().wallRight = false;
+        }
+        else if (collision.collider.tag == "LeftWall")
+        {
             Player.GetComponent<PlayerMovement>().wallLeft = false;
         }
     }
