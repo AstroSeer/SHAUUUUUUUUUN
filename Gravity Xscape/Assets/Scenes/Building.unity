@@ -193,6 +193,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8103986, y: 4.8581076}
   m_EdgeRadius: 0
+--- !u!1 &78365356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78365357}
+  m_Layer: 0
+  m_Name: Thief_Switch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78365357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78365356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7454439, y: 0.5673175, z: -62.887703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &97712865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,6 +1365,7 @@ GameObject:
   - component: {fileID: 930777122}
   - component: {fileID: 930777121}
   - component: {fileID: 930777120}
+  - component: {fileID: 930777126}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -1490,6 +1521,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &930777126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930777119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccc232d20b3a7c43a2529925a0e2f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startBuild: {fileID: 22100000, guid: d54245d0d3b7c6449bb5a27c6da20f28, type: 2}
+  Steal: {fileID: 22100000, guid: be47d7debe4482843a446c9b13b373d1, type: 2}
 --- !u!1 &995475803
 GameObject:
   m_ObjectHideFlags: 0

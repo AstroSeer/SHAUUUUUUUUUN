@@ -12,6 +12,7 @@ TagManager:
   - OutOfBounds
   - Key
   - Door
+  - Steal
   layers:
   - Default
   - TransparentFX
