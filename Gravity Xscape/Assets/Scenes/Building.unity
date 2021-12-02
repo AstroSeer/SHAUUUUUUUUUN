@@ -800,8 +800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4231181b1e3db4e4e81572de9604a7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStart: 60
-  textBox: {fileID: 0}
 --- !u!1 &365990447
 GameObject:
   m_ObjectHideFlags: 0

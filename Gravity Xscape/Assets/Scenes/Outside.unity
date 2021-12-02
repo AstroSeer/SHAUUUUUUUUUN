@@ -571,9 +571,17 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5845558094426594588, guid: 53833534ee5572947b91823d6c45814f, type: 3}
+      propertyPath: m_TagString
+      value: LeftWall
+      objectReference: {fileID: 0}
     - target: {fileID: 6785116911677673324, guid: 53833534ee5572947b91823d6c45814f, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708718596654220869, guid: 53833534ee5572947b91823d6c45814f, type: 3}
+      propertyPath: m_TagString
+      value: RightWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: 53833534ee5572947b91823d6c45814f, type: 3}
@@ -744,8 +752,8 @@ CanvasGroup:
   m_GameObject: {fileID: 653525012}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &653525016
 MonoBehaviour:
