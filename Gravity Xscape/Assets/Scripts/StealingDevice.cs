@@ -10,21 +10,17 @@ public class StealingDevice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Animator>().runtimeAnimatorController = startBuild as RuntimeAnimatorController;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("q"))
-        {
-            GetComponent<Animator>().runtimeAnimatorController = startBuild as RuntimeAnimatorController;
-            Debug.Log("Pressed");
-        }
-        if(Input.GetKeyDown("e"))
-        {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if(collider.tag == "Steal") {
             GetComponent<Animator>().runtimeAnimatorController = Steal as RuntimeAnimatorController;
-            Debug.Log("Revert");
         }
     }
 }

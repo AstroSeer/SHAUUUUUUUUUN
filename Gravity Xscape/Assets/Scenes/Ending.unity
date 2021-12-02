@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: -6947771254838197216, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -3261766353186898022, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -218,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6861673784697956964, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6861673784697956964, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,8 +287,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &574308812
-CapsuleCollider2D:
+--- !u!61 &574308812
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -296,9 +300,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5222565, y: -0.91270506}
-  m_Size: {x: 5.158702, y: 9.556914}
-  m_Direction: 0
+  m_Offset: {x: 0.35, y: -1.3000002}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 13.75, y: 12.5}
+    newSize: {x: 13.75, y: 12.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.2, y: 9.9}
+  m_EdgeRadius: 0
 --- !u!50 &574308813
 Rigidbody2D:
   serializedVersion: 4
@@ -338,6 +352,10 @@ MonoBehaviour:
   wallLeft: 0
   wallRight: 0
   gravityShift: 0
+  canShift: 0
+  keys: 0
+  keysAdd: 0
+  keysSub: 0
   animator: {fileID: 574308815}
 --- !u!95 &574308815
 Animator:
@@ -397,7 +415,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6527623753779468337, guid: c174fcb8aa531204a8913420b2b3b1ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -425,7 +443,7 @@ Transform:
   - {fileID: 498839976}
   - {fileID: 1333627714}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1224713405
 GameObject:
