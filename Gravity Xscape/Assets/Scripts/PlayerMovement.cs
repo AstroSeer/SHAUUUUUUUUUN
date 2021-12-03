@@ -12,16 +12,21 @@ public class PlayerMovement : MonoBehaviour {
 
     public bool gravityShift = false;
     public bool canShift = false;
+    public bool hasGravityItem = false;
 
     public int keys = 0;
     public bool keysAdd = false;
     public bool keysSub = false;
 
     public Animator animator;
+    public GameObject Shift;
 
     void Start()
     {
-
+       if(SceneManager.GetActiveScene().buildIndex != 1)
+       {
+           hasGravityItem = true;
+       } 
     }
 
     // Update is called once per frame
@@ -57,7 +62,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             transform.position += move * Time.deltaTime * playerMovementSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canShift) 
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canShift && hasGravityItem) 
         {
             gravityShift = !gravityShift;
             canShift = !canShift;
@@ -150,6 +155,10 @@ public class PlayerMovement : MonoBehaviour {
         }
         if(collider.tag == "OutOfBounds") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if(collider.tag == "Steal") {
+            hasGravityItem = true;
+            Shift.SetActive(true);
         }
     }
 }

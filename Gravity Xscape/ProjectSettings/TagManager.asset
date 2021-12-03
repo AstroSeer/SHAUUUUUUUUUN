@@ -12,6 +12,8 @@ TagManager:
   - OutOfBounds
   - Key
   - Door
+  - Steal
+  - Destroy
   layers:
   - Default
   - TransparentFX
@@ -46,6 +48,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Clouds
+    uniqueID: 2260859265
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
