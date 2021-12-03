@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour {
     void Update() 
     {
         Jump();
+        Debug.Log("Grounded is currently "+grounded);
         // Horizontal input causes character to move at playerMovementSpeed's value
         if(keysAdd)
         {
@@ -84,7 +85,7 @@ public class PlayerMovement : MonoBehaviour {
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             p_audioSource.PlayOneShot(gravity_sfx, 1);
-            Debug.Log(gravityShift);
+            Debug.Log("Gravity shift is "+gravityShift);
             Vector3 characterScaleY = transform.localScale;
             if (gravityShift == true)
             {

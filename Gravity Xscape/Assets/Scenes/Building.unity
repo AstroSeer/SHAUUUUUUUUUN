@@ -1934,7 +1934,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.315177, y: -1.9250975}
+  m_Offset: {x: -3.3678904, y: -1.9250975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1945,7 +1945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8060732, y: 4.850195}
+  m_Size: {x: 0.9115002, y: 4.850195}
   m_EdgeRadius: 0
 --- !u!1 &1119013504
 GameObject:
@@ -2006,7 +2006,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2501558, y: -5.9370327}
+  m_Offset: {x: 0.2501558, y: -5.99387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2017,7 +2017,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5682666, y: 0.53304243}
+  m_Size: {x: 3.5682666, y: 0.6467171}
   m_EdgeRadius: 0
 --- !u!1 &1196438987
 GameObject:
@@ -2590,6 +2590,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1196438987}
+  l_audio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1560893732
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3664,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEscaping: 0
   hasLooped: 0
-  l_audio: {fileID: 2039848644}
+  l_audioSource: {fileID: 0}
   escapeDrum_ost: {fileID: 8300000, guid: db882e4310c52d647bcb90e772f9def5, type: 3}
   escape_ost: {fileID: 8300000, guid: 8e3fda33b9815f24ebeda783118cfb55, type: 3}
