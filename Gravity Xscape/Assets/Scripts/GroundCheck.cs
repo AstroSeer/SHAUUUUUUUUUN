@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour {
     GameObject Player;
+
+    public AudioSource p_audio;
+
+    public AudioClip land_sfx;
     // Start is called before the first frame update
     void Start() {
         Player = gameObject.transform.parent.gameObject;
+        p_audio = GetComponentInParent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,6 +23,7 @@ public class GroundCheck : MonoBehaviour {
         if(collision.collider.tag == "Ground") {
             Player.GetComponent<PlayerMovement>().grounded = true;
             Player.GetComponent<PlayerMovement>().canShift = true;
+            p_audio.PlayOneShot(land_sfx, .35f);
         }
     }
 

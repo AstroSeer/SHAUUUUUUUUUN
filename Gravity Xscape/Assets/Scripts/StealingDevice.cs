@@ -7,6 +7,7 @@ public class StealingDevice : MonoBehaviour
     public AnimatorOverrideController startBuild;
     public AnimatorOverrideController Steal;
 
+
     // Start is called before the first frame update
     void Start()
     {

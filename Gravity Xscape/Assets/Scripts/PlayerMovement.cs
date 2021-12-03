@@ -21,12 +21,22 @@ public class PlayerMovement : MonoBehaviour {
     public Animator animator;
     public GameObject Shift;
 
+
+    public AudioSource p_audioSource;
+
+    public AudioClip walking_sfx;
+    public AudioClip gravity_sfx;
+
+    public AudioClip death_sfx;
+
     void Start()
     {
        if(SceneManager.GetActiveScene().buildIndex != 1)
        {
            hasGravityItem = true;
        } 
+
+       p_audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -62,12 +72,18 @@ public class PlayerMovement : MonoBehaviour {
         {
             transform.position += move * Time.deltaTime * playerMovementSpeed;
         }
+
+        if ((move.x < 0 || move.x > 0) && !p_audioSource.isPlaying && grounded == true)
+        {
+            p_audioSource.PlayOneShot(walking_sfx, 1);
+        }
         if (Input.GetKeyDown(KeyCode.LeftShift) && canShift && hasGravityItem) 
         {
             gravityShift = !gravityShift;
             canShift = !canShift;
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
+            p_audioSource.PlayOneShot(gravity_sfx, 1);
             Debug.Log(gravityShift);
             Vector3 characterScaleY = transform.localScale;
             if (gravityShift == true)
@@ -154,6 +170,8 @@ public class PlayerMovement : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if(collider.tag == "OutOfBounds") {
+            Debug.Log("Die");
+            p_audioSource.PlayOneShot(death_sfx, 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if(collider.tag == "Steal") {

@@ -3,7 +3,9 @@ guid: 0159c285c5e845d4d8b2e03c25c785da
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - p_audio: {instanceID: 0}
+  - land_sfx: {fileID: 8300000, guid: 43daafd477721ca4ab5fbcb1c63dfa03, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
