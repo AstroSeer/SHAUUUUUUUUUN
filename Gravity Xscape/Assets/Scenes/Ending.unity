@@ -204,6 +204,74 @@ PrefabInstance:
       propertyPath: m_TagString
       value: NextLevel
       objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
+      value: 49.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
+      value: -55.52339
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
+      value: 49.999973
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
+      value: -55.000034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
+      value: 26.999971
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
+      value: -56.000034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
+      value: 25.999971
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
+      value: -57
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].y
+      value: -57.000034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].x
+      value: 25.000029
+      objectReference: {fileID: 0}
+    - target: {fileID: -8094208053813546730, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].y
+      value: -59
+      objectReference: {fileID: 0}
     - target: {fileID: -6987490179176294283, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -369,6 +437,7 @@ MonoBehaviour:
   wallRight: 0
   gravityShift: 0
   canShift: 0
+  hasGravityItem: 0
   keys: 0
   keysAdd: 0
   keysSub: 0
