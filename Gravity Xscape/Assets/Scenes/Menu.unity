@@ -234,7 +234,7 @@ RectTransform:
   m_GameObject: {fileID: 769084997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.533746, y: 5.533746, z: 5.533746}
+  m_LocalScale: {x: 3.9155126, y: 3.9155126, z: 3.9155126}
   m_Children:
   - {fileID: 2056713186}
   m_Father: {fileID: 1361524574}
@@ -242,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 5.622265}
+  m_AnchoredPosition: {x: 70, y: -64}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &769084999
@@ -366,14 +366,14 @@ RectTransform:
   m_GameObject: {fileID: 924016574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8217, y: 1.8217, z: 1.8217}
+  m_LocalScale: {x: 1.2889802, y: 1.2889802, z: 1.2889802}
   m_Children: []
   m_Father: {fileID: 1361524574}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 288}
+  m_AnchoredPosition: {x: 70, y: 148}
   m_SizeDelta: {x: 608.3198, y: 78.3198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &924016576
@@ -501,7 +501,7 @@ RectTransform:
   m_GameObject: {fileID: 1011083740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.533746, y: 5.533746, z: 5.533746}
+  m_LocalScale: {x: 3.9155126, y: 3.9155126, z: 3.9155126}
   m_Children:
   - {fileID: 1401745649}
   m_Father: {fileID: 1361524574}
@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66.941, y: -269}
+  m_AnchoredPosition: {x: 66.941, y: -274}
   m_SizeDelta: {x: 153.8828, y: 48.9942}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1011083742
@@ -787,8 +787,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4292182269
+  m_fontColor: {r: 0.990566, g: 0.50151294, b: 0.8362526, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -987,8 +987,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4292182269
+  m_fontColor: {r: 0.990566, g: 0.50151294, b: 0.8362526, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

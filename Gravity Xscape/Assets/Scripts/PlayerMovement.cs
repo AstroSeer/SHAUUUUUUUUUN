@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour {
        {
            hasGravityItem = true;
        } 
-
        p_audioSource = GetComponent<AudioSource>();
     }
 
