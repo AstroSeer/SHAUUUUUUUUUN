@@ -96,6 +96,9 @@ public class PlayerMovement : MonoBehaviour {
             }
             transform.localScale = characterScaleY;
         }
+        if (Input.GetKeyDown(KeyCode.R)){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         if (grounded == false) {
             animator.SetBool("IsFalling", true);
         }
@@ -115,6 +118,7 @@ public class PlayerMovement : MonoBehaviour {
         transform.localScale = characterScaleX;
         // Walk & Idle Animation
         animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        //RestartShortcut
     }
 
     // Method for 
