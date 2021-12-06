@@ -805,7 +805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &365990448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2537,6 +2537,7 @@ GameObject:
   - component: {fileID: 1560893733}
   - component: {fileID: 1560893735}
   - component: {fileID: 1560893734}
+  - component: {fileID: 1560893736}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -2583,7 +2584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Get the Pink X to break the wall.
+  m_text: Timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -2660,6 +2661,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560893732}
   m_CullTransparentMesh: 1
+--- !u!114 &1560893736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560893732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766943fc9476d404d8852472895228c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingTime: 60
+  countDown: {fileID: 1560893734}
 --- !u!1 &1719140831
 GameObject:
   m_ObjectHideFlags: 0
