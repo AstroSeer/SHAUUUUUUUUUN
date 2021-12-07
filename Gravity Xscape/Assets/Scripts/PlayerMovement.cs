@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool keysSub = false;
 
     public Animator animator;
+    public Animator W_Flash;
     public GameObject Shift;
 
 
@@ -181,6 +182,8 @@ public class PlayerMovement : MonoBehaviour {
         if(collider.tag == "Steal") {
             hasGravityItem = true;
             Shift.SetActive(true);
+            W_Flash.SetTrigger("Start_W");
+            W_Flash.SetTrigger("End");
         }
     }
 }
