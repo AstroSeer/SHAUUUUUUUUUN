@@ -705,6 +705,7 @@ MonoBehaviour:
   keysAdd: 0
   keysSub: 0
   animator: {fileID: 611162038}
+  W_Flash: {fileID: 0}
   Shift: {fileID: 0}
   p_audioSource: {fileID: 611162033}
   walking_sfx: {fileID: 8300000, guid: 486f8ea7ee492c74e80f954c629ff563, type: 3}
@@ -939,6 +940,14 @@ PrefabInstance:
     - target: {fileID: -4464943091792538938, guid: 53833534ee5572947b91823d6c45814f, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3120791173938075354, guid: 53833534ee5572947b91823d6c45814f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -1122799817947375010, guid: 53833534ee5572947b91823d6c45814f, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 606735423564942990, guid: 53833534ee5572947b91823d6c45814f, type: 3}
       propertyPath: m_RootOrder

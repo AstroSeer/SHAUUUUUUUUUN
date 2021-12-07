@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GroundCheck : MonoBehaviour {
     GameObject Player;
@@ -25,7 +26,13 @@ public class GroundCheck : MonoBehaviour {
             Player.GetComponent<PlayerMovement>().canShift = true;
             p_audio.PlayOneShot(land_sfx, .35f);
         }
+        if (collision.collider.tag == "Death")
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
+
 
     // Checks if player is not touching ground
     private void OnCollisionExit2D(Collision2D collision) {

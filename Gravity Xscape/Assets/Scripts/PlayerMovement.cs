@@ -185,5 +185,11 @@ public class PlayerMovement : MonoBehaviour {
             W_Flash.SetTrigger("Start_W");
             W_Flash.SetTrigger("End");
         }
+        if(collider.tag == "Death")
+        {
+            Time.timeScale = 1f;
+            p_audioSource.PlayOneShot(death_sfx, 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
