@@ -17,11 +17,19 @@ public class LevelAudio : MonoBehaviour
 
     public AudioClip escape_ost;
 
+    public AudioClip inflitrate_ost;
+
 
     // Start is called before the first frame update
     void Start()
     {
         l_audioSource = GetComponent<AudioSource>();
+
+        DontDestroyOnLoad(this.gameObject);
+
+        l_audioSource.clip = inflitrate_ost;
+
+        l_audioSource.Play();
     }
 
     // Update is called once per frame
@@ -36,7 +44,9 @@ public class LevelAudio : MonoBehaviour
                 l_audioSource.loop = true;
                 if (!l_audioSource.isPlaying)
                 {
-                    l_audioSource.PlayOneShot(escape_ost);
+                    l_audioSource.loop = true;
+                    l_audioSource.clip = escape_ost; ;
+                    l_audioSource.Play();
                 }
             }
             else
@@ -44,7 +54,7 @@ public class LevelAudio : MonoBehaviour
                 l_audioSource.Stop();
                 l_audioSource.loop = false;
                 if (!l_audioSource.isPlaying){
-                    l_audioSource.PlayOneShot(escapeDrum_ost);
+                    l_audioSource.PlayOneShot(escapeDrum_ost, 1);
                     hasLooped = true;
                 }
             }

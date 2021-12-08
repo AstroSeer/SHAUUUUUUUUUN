@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if ((move.x < 0 || move.x > 0) && !p_audioSource.isPlaying && grounded == true)
         {
-            p_audioSource.PlayOneShot(walking_sfx, 1);
+            p_audioSource.PlayOneShot(walking_sfx, .75f);
         }
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canShift && hasGravityItem) 
         {
