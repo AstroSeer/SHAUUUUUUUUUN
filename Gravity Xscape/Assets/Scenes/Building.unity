@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766943fc9476d404d8852472895228c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 300
+  startingTime: 150
   countDown: {fileID: 1560893734}
 --- !u!1 &526759211
 GameObject:
