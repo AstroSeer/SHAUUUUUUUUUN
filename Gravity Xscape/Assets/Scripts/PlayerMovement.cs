@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             p_audioSource.PlayOneShot(walking_sfx, 1);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canShift && hasGravityItem) 
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canShift && hasGravityItem) 
         {
             gravityShift = !gravityShift;
             canShift = !canShift;
@@ -99,6 +99,9 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.R)){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.X)){
+            animator.SetTrigger("Death");
         }
         if (grounded == false) {
             animator.SetBool("IsFalling", true);
@@ -124,7 +127,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Method for 
     void Jump() {
-        if(Input.GetButtonDown("Jump") && grounded == true) 
+        if(((Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) || Input.GetKeyDown(KeyCode.UpArrow)) && grounded == true) 
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, playerJumpHeight), ForceMode2D.Impulse);
             animator.SetTrigger("IsJumping");
