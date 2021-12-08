@@ -15,8 +15,8 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         currentTime = startingTime;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -29,11 +29,11 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
             SceneManager.LoadScene("GameOver");
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
         if(SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 5) 
         {
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }
