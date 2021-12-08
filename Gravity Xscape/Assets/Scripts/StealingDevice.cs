@@ -23,8 +23,6 @@ public class StealingDevice : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider) {
         if(collider.tag == "Steal") {
             GetComponent<Animator>().runtimeAnimatorController = Steal as RuntimeAnimatorController;
-            animator.SetTrigger("Start_W");
-            animator.SetTrigger("End");
         }
     }
 }

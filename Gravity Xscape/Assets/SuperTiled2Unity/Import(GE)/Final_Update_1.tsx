@@ -53,27 +53,27 @@
  </tile>
  <tile id="17">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="4" width="1" height="3"/>
+   <object id="1" x="0" y="4" width="1" height="6"/>
   </objectgroup>
  </tile>
  <tile id="19">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="15" y="4" width="1" height="3"/>
+   <object id="1" x="15" y="4" width="1" height="6"/>
   </objectgroup>
  </tile>
  <tile id="22">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="4" width="16" height="3"/>
+   <object id="1" x="0" y="4" width="16" height="6"/>
   </objectgroup>
  </tile>
  <tile id="23">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="4" width="16" height="3"/>
+   <object id="1" x="0" y="4" width="16" height="6"/>
   </objectgroup>
  </tile>
  <tile id="24">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="4" width="16" height="3"/>
+   <object id="1" x="0" y="4" width="16" height="6"/>
   </objectgroup>
  </tile>
 </tileset>
