@@ -15,6 +15,7 @@ TagManager:
   - Steal
   - Destroy
   - Timer
+  - Guard
   layers:
   - Default
   - TransparentFX
