@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WallCheck : MonoBehaviour {
     GameObject Player;
@@ -22,7 +23,13 @@ public class WallCheck : MonoBehaviour {
         {
             Player.GetComponent<PlayerMovement>().wallLeft = true;
         }
+        if (collision.collider.tag == "Death")
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
+
     private void OnCollisionExit2D(Collision2D collision) {
         if (collision.collider.tag == "RightWall")
         {
@@ -33,4 +40,5 @@ public class WallCheck : MonoBehaviour {
             Player.GetComponent<PlayerMovement>().wallLeft = false;
         }
     }
+
 }

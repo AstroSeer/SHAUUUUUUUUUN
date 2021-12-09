@@ -46,19 +46,19 @@ public class PlayerMovement : MonoBehaviour {
     void Update() 
     {
         Jump();
-        Debug.Log("Grounded is currently "+grounded);
+        //Debug.Log("Grounded is currently "+grounded);
         // Horizontal input causes character to move at playerMovementSpeed's value
         if(keysAdd)
         {
             keys = keys + 1;
             keysAdd = false;
-            Debug.Log("Keys are now " + keys);
+            //Debug.Log("Keys are now " + keys);
         }
         if(keysSub)
         {
             keys = keys - 1;
             keysSub = false;
-            Debug.Log("Door opened, keys are now " + keys);
+            //Debug.Log("Door opened, keys are now " + keys);
             wallLeft = false;
             wallRight = false;
         }
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour {
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
             p_audioSource.PlayOneShot(gravity_sfx, 1);
-            Debug.Log("Gravity shift is "+gravityShift);
+            //Debug.Log("Gravity shift is "+gravityShift);
             Vector3 characterScaleY = transform.localScale;
             if (gravityShift == true)
             {
@@ -176,16 +176,16 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
     //NextLevel
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.tag == "NextLevel") {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.GetComponent<Collider>().tag == "NextLevel") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if(collider.tag == "OutOfBounds") {
-            Debug.Log("Die");
+        if(collision.GetComponent<Collider>().tag == "OutOfBounds") {
+            //Debug.Log("Die");
             p_audioSource.PlayOneShot(death_sfx, 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if(collider.tag == "Steal") {
+        if(collision.GetComponent<Collider>().tag == "Steal") {
             hasGravityItem = true;
             Shift.SetActive(true);
             Guard1.SetActive(true);
@@ -194,6 +194,12 @@ public class PlayerMovement : MonoBehaviour {
             Guard4.SetActive(true);
             W_Flash.SetTrigger("Start_W");
             W_Flash.SetTrigger("End");
+        }
+        if(collision.GetComponent<Collider>().tag == "Death")
+        {
+            Time.timeScale = 1f;
+            p_audioSource.PlayOneShot(death_sfx, 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
