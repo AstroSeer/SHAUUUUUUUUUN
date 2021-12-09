@@ -15,6 +15,7 @@ TagManager:
   - Steal
   - Destroy
   - Death
+  - Patrol
   layers:
   - Default
   - TransparentFX

@@ -40,4 +40,5 @@ public class WallCheck : MonoBehaviour {
             Player.GetComponent<PlayerMovement>().wallLeft = false;
         }
     }
+
 }

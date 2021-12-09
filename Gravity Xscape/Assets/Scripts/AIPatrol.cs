@@ -4,22 +4,36 @@ using UnityEngine;
 
 public class AIPatrol : MonoBehaviour
 {
-    public bool patrol;
+    public bool patrol = true;
     public Rigidbody2D rigid;
-    public float speed = 1;
+    public float speed = 5;
+    static public float waitingConst = 120;
+
+    private bool needWait = false;
+    private float waitingTime = waitingConst;
     // Start is called before the first frame update
     void Start()
     {
-        patrol = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(patrol)
+        if (patrol && !needWait)
         {
+            //Debug.Log("I am in patrol mode");
             doPatrol();
-        }    
+        }
+        if(needWait)
+        {
+            waitingTime = waitingTime - 1;
+            if(waitingTime == 0)
+            {
+                needWait = false;
+                waitingTime = waitingConst;
+                reverse();
+            }
+        }
     }
 
     void doPatrol()
@@ -33,5 +47,12 @@ public class AIPatrol : MonoBehaviour
         speed = speed * -1;
         transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         patrol = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Patrol")
+        {
+            needWait = true;
+        }
     }
 }
