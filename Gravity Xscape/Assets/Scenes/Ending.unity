@@ -561,6 +561,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -6287275383546804452, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5248719310367510699, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
+      propertyPath: m_TagString
+      value: OutOfBounds
+      objectReference: {fileID: 0}
     - target: {fileID: -3261766353186898022, guid: 333bd7f66a1354445941c7fc70104949, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1008,7 +1016,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.3, y: -1.6}
+  m_Offset: {x: 4.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1019,7 +1027,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 4.2}
+  m_Size: {x: 3.5, y: 7.3}
   m_EdgeRadius: 0
 --- !u!1 &1224713405
 GameObject:
@@ -1391,6 +1399,10 @@ MonoBehaviour:
   animator: {fileID: 1274096069}
   W_Flash: {fileID: 0}
   Shift: {fileID: 0}
+  Guard1: {fileID: 0}
+  Guard2: {fileID: 0}
+  Guard3: {fileID: 0}
+  Guard4: {fileID: 0}
   p_audioSource: {fileID: 1274096064}
   walking_sfx: {fileID: 8300000, guid: 486f8ea7ee492c74e80f954c629ff563, type: 3}
   gravity_sfx: {fileID: 8300000, guid: 44755407d188d104790ed33ca515fdd9, type: 3}
