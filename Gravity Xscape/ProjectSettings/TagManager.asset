@@ -53,6 +53,9 @@ TagManager:
   - name: Clouds
     uniqueID: 2260859265
     locked: 0
+  - name: Door
+    uniqueID: 4030511725
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
