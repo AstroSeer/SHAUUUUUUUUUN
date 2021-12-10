@@ -7,7 +7,6 @@ public class GroundCheck : MonoBehaviour {
     GameObject Player;
 
     public AudioSource p_audio;
-    public bool isGrounded = false;
 
     public AudioClip land_sfx;
     // Start is called before the first frame update
@@ -18,26 +17,20 @@ public class GroundCheck : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(isGrounded)
-        {
-            Player.GetComponent<PlayerMovement>().grounded = true;
-            Player.GetComponent<PlayerMovement>().canShift = true;
-        }
-        else
-        {
-            Player.GetComponent<PlayerMovement>().grounded = false;
-        }
+        
     }
 
     // Checks if player is touching ground
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.collider.tag == "Ground" || collision.collider.tag == "Patrol") {
             Debug.Log("I am entering "+collision.collider.tag);
-            isGrounded = true;
+            Player.GetComponent<PlayerMovement>().grounded = true;
+            Player.GetComponent<PlayerMovement>().canShift = true;
             p_audio.PlayOneShot(land_sfx, .35f);
         }
         if (collision.collider.tag == "Death")
         {
+            Debug.Log("I am dying from "+ collision.collider.tag);
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -47,7 +40,7 @@ public class GroundCheck : MonoBehaviour {
     // Checks if player is not touching ground
     private void OnCollisionExit2D(Collision2D collision) {
         if (collision.collider.tag == "Ground" || collision.collider.tag == "Patrol") {
-            isGrounded = false;
+            Player.GetComponent<PlayerMovement>().grounded = false;
             Debug.Log("I am exiting " + collision.collider.tag);
         }
     }

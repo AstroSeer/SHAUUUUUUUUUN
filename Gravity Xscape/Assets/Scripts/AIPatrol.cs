@@ -30,6 +30,7 @@ public class AIPatrol : MonoBehaviour
             if(waitingTime == 0)
             {
                 needWait = false;
+                patrol = true;
                 waitingTime = waitingConst;
                 reverse();
             }
@@ -53,6 +54,7 @@ public class AIPatrol : MonoBehaviour
         if (collision.collider.tag == "Patrol")
         {
             needWait = true;
+            patrol = false;
         }
     }
 }

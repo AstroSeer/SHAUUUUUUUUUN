@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject Shift;
     public GameObject Guard1;
     public GameObject Guard2;
-    public GameObject Guard3;
     public GameObject Guard4;
 
     public AudioSource p_audioSource;
@@ -192,7 +191,6 @@ public class PlayerMovement : MonoBehaviour {
             Shift.SetActive(true);
             Guard1.SetActive(true);
             Guard2.SetActive(true);
-            Guard3.SetActive(true);
             Guard4.SetActive(true);
             W_Flash.SetTrigger("Start_W");
             W_Flash.SetTrigger("End");

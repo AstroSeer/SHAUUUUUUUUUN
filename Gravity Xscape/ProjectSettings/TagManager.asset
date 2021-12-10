@@ -16,6 +16,9 @@ TagManager:
   - Destroy
   - Death
   - Patrol
+  - Timer
+  - Guard
+  - EvilGuard
   layers:
   - Default
   - TransparentFX

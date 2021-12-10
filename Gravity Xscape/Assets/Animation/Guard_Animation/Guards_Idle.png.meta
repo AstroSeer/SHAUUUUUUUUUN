@@ -112,9 +112,9 @@ TextureImporter:
       name: Guards_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -135,7 +135,7 @@ TextureImporter:
         serializedVersion: 2
         x: 360
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -156,7 +156,7 @@ TextureImporter:
         serializedVersion: 2
         x: 720
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -177,7 +177,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1080
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -198,7 +198,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1440
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1800
         y: 0
-        width: 358
+        width: 132
         height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

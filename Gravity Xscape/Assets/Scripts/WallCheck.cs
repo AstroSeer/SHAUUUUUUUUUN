@@ -23,7 +23,7 @@ public class WallCheck : MonoBehaviour {
         {
             Player.GetComponent<PlayerMovement>().wallLeft = true;
         }
-        if (collision.collider.tag == "Death")
+        if (collision.collider.tag == "Death" || collision.collider.tag == "Guard" || collision.collider.tag == "EvilGuard")
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
