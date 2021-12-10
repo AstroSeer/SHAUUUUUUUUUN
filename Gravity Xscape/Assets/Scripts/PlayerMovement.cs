@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update() 
     {
+        //Debug.Log("");
         Jump();
         //Debug.Log("Grounded is currently "+grounded);
         // Horizontal input causes character to move at playerMovementSpeed's value
@@ -176,17 +177,18 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
     //NextLevel
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.GetComponent<Collider>().tag == "NextLevel") {
+    private void OnTriggerEnter2D(Collider2D collider) {
+        if(collider.tag == "NextLevel") {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        if(collision.GetComponent<Collider>().tag == "OutOfBounds") {
+        if(collider.tag == "OutOfBounds") {
             //Debug.Log("Die");
             p_audioSource.PlayOneShot(death_sfx, 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if(collision.GetComponent<Collider>().tag == "Steal") {
+        if(collider.tag == "Steal") {
             hasGravityItem = true;
+            Debug.Log("Gravity item is now "+ hasGravityItem);
             Shift.SetActive(true);
             Guard1.SetActive(true);
             Guard2.SetActive(true);
@@ -195,7 +197,7 @@ public class PlayerMovement : MonoBehaviour {
             W_Flash.SetTrigger("Start_W");
             W_Flash.SetTrigger("End");
         }
-        if(collision.GetComponent<Collider>().tag == "Death")
+        if(collider.tag == "Death")
         {
             Time.timeScale = 1f;
             p_audioSource.PlayOneShot(death_sfx, 1);
