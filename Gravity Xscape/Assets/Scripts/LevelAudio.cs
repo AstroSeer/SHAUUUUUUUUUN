@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelAudio : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class LevelAudio : MonoBehaviour
 
     public AudioClip inflitrate_ost;
 
+    private static Object ObjectI;
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +32,27 @@ public class LevelAudio : MonoBehaviour
         l_audioSource.clip = inflitrate_ost;
 
         l_audioSource.Play();
+
+        if (ObjectI == null)
+        {
+            ObjectI = this;
+        }
+        else
+        {
+            Object.Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        isEscaping = GameObject.Find("Thief").GetComponent<PlayerMovement>().hasGravityItem;
-        
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name != "Credits")
+        {
+            isEscaping = GameObject.Find("Thief").GetComponent<PlayerMovement>().hasGravityItem;
+        }
+
         if (isEscaping == true)
         {
             if (hasLooped)
@@ -58,6 +74,10 @@ public class LevelAudio : MonoBehaviour
                     hasLooped = true;
                 }
             }
+        }
+        if (scene.name == "Credits")
+        {
+            l_audioSource.Stop();
         }
     }
 }

@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 {
     float currentTime;
     public float startingTime = 60f;
-
+    private static Object ObjectI;
     [SerializeField] TextMeshProUGUI countDown;
 
     // Start is called before the first frame update
@@ -17,6 +17,15 @@ public class Timer : MonoBehaviour
     {
         currentTime = startingTime;
         DontDestroyOnLoad(this.gameObject);
+
+        if (ObjectI == null)
+        {
+            ObjectI = this;
+        }
+        else
+        {
+            Object.Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

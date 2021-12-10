@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if ((move.x < 0 || move.x > 0) && !p_audioSource.isPlaying && grounded == true)
         {
-            p_audioSource.PlayOneShot(walking_sfx, .75f);
+            p_audioSource.PlayOneShot(walking_sfx, .55f);
         }
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canShift && hasGravityItem) 
         {
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour {
             canShift = !canShift;
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
-            p_audioSource.PlayOneShot(gravity_sfx, 1);
+            p_audioSource.PlayOneShot(gravity_sfx, .55f);
             //Debug.Log("Gravity shift is "+gravityShift);
             Vector3 characterScaleY = transform.localScale;
             if (gravityShift == true)
@@ -103,9 +103,9 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R)){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (Input.GetKeyDown(KeyCode.X)){
-            animator.SetTrigger("Death");
-        }
+        //if (Input.GetKeyDown(KeyCode.X)){
+           // animator.SetTrigger("Death");
+        //}
         if (grounded == false) {
             animator.SetBool("IsFalling", true);
         }
