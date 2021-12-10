@@ -48,11 +48,15 @@ public class LevelAudio : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if (scene.name != "Credits")
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex != 0 || SceneManager.GetActiveScene().buildIndex != 5)
         {
             isEscaping = GameObject.Find("Thief").GetComponent<PlayerMovement>().hasGravityItem;
         }
-
         if (isEscaping == true)
         {
             if (hasLooped)
@@ -69,15 +73,13 @@ public class LevelAudio : MonoBehaviour
             {
                 l_audioSource.Stop();
                 l_audioSource.loop = false;
-                if (!l_audioSource.isPlaying){
+                if (!l_audioSource.isPlaying)
+                {
                     l_audioSource.PlayOneShot(escapeDrum_ost, 1);
                     hasLooped = true;
                 }
             }
         }
-        if (scene.name == "Credits")
-        {
-            l_audioSource.Stop();
-        }
+      
     }
 }
