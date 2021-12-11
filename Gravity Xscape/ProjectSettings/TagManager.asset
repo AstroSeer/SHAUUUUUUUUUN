@@ -19,6 +19,7 @@ TagManager:
   - Timer
   - Guard
   - EvilGuard
+  - CreditEnd
   layers:
   - Default
   - TransparentFX
