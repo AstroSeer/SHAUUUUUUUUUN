@@ -30,7 +30,7 @@ public class AIPatrol : MonoBehaviour
         if(needWait)
         {
             waitingTime = waitingTime - 1;
-            guardWalk.SetBool("Stopped",true);
+            guardWalk.SetBool("IsMoving",false);
             if(waitingTime == 0)
             {
                 needWait = false;
@@ -44,7 +44,7 @@ public class AIPatrol : MonoBehaviour
     void doPatrol()
     {
         rigid.velocity = new Vector2(speed * Time.fixedDeltaTime, rigid.velocity.y);
-        guardWalk.SetBool("Stopped",false);
+        guardWalk.SetBool("IsMoving",true);
     }
 
     void reverse()
