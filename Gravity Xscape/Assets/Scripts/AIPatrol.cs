@@ -11,6 +11,9 @@ public class AIPatrol : MonoBehaviour
 
     private bool needWait = false;
     private float waitingTime = waitingConst;
+
+    public Animator guardWalk;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class AIPatrol : MonoBehaviour
         if(needWait)
         {
             waitingTime = waitingTime - 1;
+            guardWalk.SetBool("Stopped",true);
             if(waitingTime == 0)
             {
                 needWait = false;
@@ -40,6 +44,7 @@ public class AIPatrol : MonoBehaviour
     void doPatrol()
     {
         rigid.velocity = new Vector2(speed * Time.fixedDeltaTime, rigid.velocity.y);
+        guardWalk.SetBool("Stopped",false);
     }
 
     void reverse()
