@@ -28,7 +28,7 @@ public class GroundCheck : MonoBehaviour {
             Player.GetComponent<PlayerMovement>().canShift = true;
             p_audio.PlayOneShot(land_sfx, .2f);
         }
-        if (collision.collider.tag == "Death")
+        if ((collision.collider.tag == "Death" || collision.collider.tag == "Guard") && Player.tag == "Player")
         {
             Debug.Log("I am dying from "+ collision.collider.tag);
             Time.timeScale = 1f;
