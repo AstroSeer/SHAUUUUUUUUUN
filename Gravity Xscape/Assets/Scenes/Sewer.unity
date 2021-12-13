@@ -1052,6 +1052,7 @@ MonoBehaviour:
   keysSub: 0
   animator: {fileID: 391127925}
   W_Flash: {fileID: 0}
+  doorStop: {fileID: 0}
   Shift: {fileID: 0}
   Guard1: {fileID: 0}
   Guard2: {fileID: 0}

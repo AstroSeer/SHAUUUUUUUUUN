@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public Animator animator;
     public Animator W_Flash;
+    public GameObject doorStop;
     public GameObject Shift;
     public GameObject Guard1;
     public GameObject Guard2;
@@ -192,6 +193,7 @@ public class PlayerMovement : MonoBehaviour {
             Guard1.SetActive(true);
             Guard2.SetActive(true);
             Guard4.SetActive(true);
+            doorStop.SetActive(true);
             W_Flash.SetTrigger("Start_W");
             W_Flash.SetTrigger("End");
         }
