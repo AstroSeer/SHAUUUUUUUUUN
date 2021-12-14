@@ -1157,7 +1157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205098663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 128, y: -25.83, z: 0}
+  m_LocalPosition: {x: 128, y: -25.69, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -1775,7 +1775,7 @@ GameObject:
   - component: {fileID: 343949162}
   m_Layer: 0
   m_Name: Guard1
-  m_TagString: Key
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4290,7 +4290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917580589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 95.4, y: -25.6, z: 0}
+  m_LocalPosition: {x: 95.61, y: -25.32, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -5345,7 +5345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120067801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 135.5, y: -25.73, z: 0}
+  m_LocalPosition: {x: 135.5, y: -25.59, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -6382,7 +6382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370241261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.5, y: -25.5, z: 0}
+  m_LocalPosition: {x: 102.8, y: -25.08, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -7345,7 +7345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702989798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 122.9, y: -25.6, z: 0}
+  m_LocalPosition: {x: 122.34, y: -24.35, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -7513,7 +7513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742212533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 116.9, y: -25.7, z: 0}
+  m_LocalPosition: {x: 116.2, y: -24.93, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -7681,7 +7681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750451686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110, y: -25.7, z: 0}
+  m_LocalPosition: {x: 110, y: -24.93, z: 0}
   m_LocalScale: {x: 0.1779209, y: 0.17572437, z: 0}
   m_Children: []
   m_Father: {fileID: 1098010632}
@@ -8226,7 +8226,7 @@ GameObject:
   - component: {fileID: 1936105823}
   m_Layer: 0
   m_Name: Guard2
-  m_TagString: Key
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
