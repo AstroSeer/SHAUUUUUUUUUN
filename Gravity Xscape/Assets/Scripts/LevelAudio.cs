@@ -48,12 +48,12 @@ public class LevelAudio : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 5 || SceneManager.GetActiveScene().buildIndex == 6 )
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 5)
         {
             Destroy(this.gameObject);
         }
 
-        if (SceneManager.GetActiveScene().buildIndex != 0 || SceneManager.GetActiveScene().buildIndex != 5 || SceneManager.GetActiveScene().buildIndex != 6)
+        if (SceneManager.GetActiveScene().buildIndex != 0 || SceneManager.GetActiveScene().buildIndex != 5)
         {
             isEscaping = GameObject.Find("Thief").GetComponent<PlayerMovement>().hasGravityItem;
         }
