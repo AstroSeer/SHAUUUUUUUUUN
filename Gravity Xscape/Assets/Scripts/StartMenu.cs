@@ -15,4 +15,9 @@ public class StartMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+    public void Credits()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Credits");
+    }
 }
