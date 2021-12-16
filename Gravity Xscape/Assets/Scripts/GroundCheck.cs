@@ -26,7 +26,7 @@ public class GroundCheck : MonoBehaviour {
             Debug.Log("I am entering "+collision.collider.tag);
             Player.GetComponent<PlayerMovement>().grounded = true;
             Player.GetComponent<PlayerMovement>().canShift = true;
-            p_audio.PlayOneShot(land_sfx, .2f);
+            p_audio.PlayOneShot(land_sfx, .15f);
         }
         if ((collision.collider.tag == "Death" || collision.collider.tag == "Guard") && Player.tag == "Player")
         {

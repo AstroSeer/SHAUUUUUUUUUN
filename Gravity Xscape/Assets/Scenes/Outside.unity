@@ -3126,6 +3126,7 @@ MonoBehaviour:
   walking_sfx: {fileID: 8300000, guid: 486f8ea7ee492c74e80f954c629ff563, type: 3}
   gravity_sfx: {fileID: 8300000, guid: 44755407d188d104790ed33ca515fdd9, type: 3}
   death_sfx: {fileID: 8300000, guid: 8f4f915eff9c8cc4b9b0c80031add0b8, type: 3}
+  key_collect_sfx: {fileID: 8300000, guid: ff5c6bb3f28636a43aadd78c5f9d84da, type: 3}
 --- !u!95 &611162038
 Animator:
   serializedVersion: 3

@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public AudioClip death_sfx;
 
+    public AudioClip key_collect_sfx;
+
     void Start()
     {
        if(SceneManager.GetActiveScene().buildIndex != 1)
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if ((move.x < 0 || move.x > 0) && !p_audioSource.isPlaying && grounded == true)
         {
-            p_audioSource.PlayOneShot(walking_sfx, .55f);
+            p_audioSource.PlayOneShot(walking_sfx, .35f);
         }
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift)) && canShift && hasGravityItem) 
         {
@@ -88,7 +90,7 @@ public class PlayerMovement : MonoBehaviour {
             canShift = !canShift;
             playerJumpHeight = playerJumpHeight * -1;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale * -1;
-            p_audioSource.PlayOneShot(gravity_sfx, .4f);
+            p_audioSource.PlayOneShot(gravity_sfx, .35f);
             //Debug.Log("Gravity shift is "+gravityShift);
             Vector3 characterScaleY = transform.localScale;
             if (gravityShift == true)
@@ -143,7 +145,9 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.collider.tag == "Key")
         {
             keysAdd = true;
+            p_audioSource.PlayOneShot(key_collect_sfx, .2f);
             Destroy(collision.gameObject);
+
         }
         if (collision.collider.tag == "Door")
         {
